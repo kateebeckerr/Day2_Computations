@@ -280,4 +280,8 @@ ttest_example <- t.test(sample1, sample2)
 
 Mean size for trees in Site A is greater than the mean size in site B (... mt statistical summary, `r ttest_example$p.value`).
 
+```{r}
+
+```
+
 
