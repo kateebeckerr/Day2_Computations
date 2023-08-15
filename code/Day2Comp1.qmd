@@ -5,9 +5,9 @@ editor: visual
 author : Kate Becker
 ---
 
-# Making and indexing data in R 
+# Making and indexing data in R
 
-### Vectors 
+### Vectors
 
 Making vectors
 
@@ -74,7 +74,7 @@ zipcodes_chr <- as.character(zipcode)
 
 ```
 
-### Create a vector with named elements 
+### Create a vector with named elements
 
 ```{r}
 #named elements within vectors or lists, still a vector use c
@@ -100,7 +100,7 @@ dog_food[2]
 dog_food["khora"]
 ```
 
-### Access ranges of values in a vector 
+### Access ranges of values in a vector
 
 Use : to refer to a range(low : high) by position
 
@@ -170,7 +170,7 @@ trees
 
 ```
 
-### Creating branches 
+### Creating branches
 
 ```{r}
 #creating git commit sending to local branch, local branch to remote main branch on git, dont wanna mess directly with main branch peopel are working on it so make side branch, lcoal branch to remote branch pushign there rather than remote main, merge into main 
@@ -183,7 +183,7 @@ trees
 #in proigres sintermitent changes/ branch
 ```
 
-## Matrix indexing 
+## Matrix indexing
 
 ```{r}
 #create matrix, last week sequence of values how many rows and colums and popualte by columns or rows? but now!!
@@ -232,3 +232,52 @@ fish_size [,2]
 #deleted remote repo branch, the branch still exists in local repo
 
 ```
+
+## Lists
+
+```{r}
+#make a list, has different classes and data structures within, blue is first element in list, make a numeric vector then a character vector, 5L  
+urchins <- list("blue", c(1,2,3), c("lunch", "dinner", "dessert"),  5L)
+```
+
+```{r}
+urchins[2]
+```
+
+```{r}
+urchins[[2]]
+```
+
+```{r}
+#use single brackets it returns that valaue (vector) but maintains originial data structure, still a list, double squared brackeets 1 
+urchins_list<- urchins[2]
+```
+
+```{r}
+#only single square bracket chanegs elements but maintains structure 
+urchins_vector <- urchins[[2]]
+```
+
+```{r}
+#providing a name to someething in a list, 
+urchins <- list(color = "blue", values = c(1,2,3), meals = c("lunch", "dinner", "dessert"), cost = 5L)
+```
+
+```{r}
+urchins$values
+```
+
+```{r}
+#two samples and a t test , t test do we have enoguh evidence to say sample was drawn from popuialtions with same means at least 7.796e-05 as different as sampels we foundm, unclieky but binary cutoff, that is so low its below threshold for 0.05, unlikely enogh from random chance if came from popualtions from same mean, reject null that from same pop with same mean , retain alternative drawn from different means to start with 
+sample1 <- c(1,2,3,4,5,4,3,2,1)
+sample2 <- c(6,7,8,9,8,7,6,5,4)
+
+ttest_example <- t.test(sample1, sample2)
+#run in console gives 
+#names important in lsit, can pull out p value from t test, naemd list and can access piece of lsit by a single name 
+
+```
+
+Mean size for trees in Site A is greater than the mean size in site B (... mt statistical summary, `r ttest_example$p.value`).
+
+
