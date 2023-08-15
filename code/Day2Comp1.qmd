@@ -178,3 +178,47 @@ trees
 #branchs provide safety check 
 
 ```
+
+```{r}
+#in proigres sintermitent changes/ branch
+```
+
+## Matrix indexing 
+
+```{r}
+#create matrix, last week sequence of values how many rows and colums and popualte by columns or rows? but now!!
+fish_size <- matrix(c(0.8, 1.2, 0.4, 0.9), ncol = 2, nrow = 2, byrow = FALSE)
+#matrices need same class, homogenous
+fish_size
+```
+
+```{r}
+class(fish_size)
+```
+
+```{r}
+#nuemric with 2 rows and 2 columns
+str(fish_size)
+```
+
+```{r}
+#type of tells you within structure what data type si for values )
+typeof(fish_size)
+```
+
+```{r}
+fish_size[]
+```
+
+```{r}
+fish_size[2,2]
+```
+
+```{r}
+#1 term keep everything, all rows and in 2nd column 
+fish_size [,2]
+```
+
+```{r}
+
+```
