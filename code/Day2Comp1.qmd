@@ -234,3 +234,11 @@ fish_size [,2]
 ```
 
 An edit!!
+
+git checkout main
+
+git branch -d new-branch-2
+
+git branch \* main
+
+pull
