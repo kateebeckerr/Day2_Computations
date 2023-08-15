@@ -178,3 +178,57 @@ trees
 #branchs provide safety check 
 
 ```
+
+```{r}
+#in proigres sintermitent changes/ branch
+```
+
+## Matrix indexing 
+
+```{r}
+#create matrix, last week sequence of values how many rows and colums and popualte by columns or rows? but now!!
+fish_size <- matrix(c(0.8, 1.2, 0.4, 0.9), ncol = 2, nrow = 2, byrow = FALSE)
+#matrices need same class, homogenous
+fish_size
+```
+
+```{r}
+class(fish_size)
+```
+
+```{r}
+#nuemric with 2 rows and 2 columns
+str(fish_size)
+```
+
+```{r}
+#type of tells you within structure what data type si for values )
+typeof(fish_size)
+```
+
+```{r}
+fish_size[]
+```
+
+```{r}
+fish_size[2,2]
+```
+
+```{r}
+#1 term keep everything, all rows and in 2nd column 
+fish_size [,2]
+```
+
+```{r}
+#everything above is saved tracked on computer locally whcih si what git does, is tracked in new branch 1 
+#local git branch, 1 new commit have pushed up to remote branch
+#comapre pull requrest requests from owner askign if they wanna merge changes
+#click on pull request 
+# merge merges from remote branch to remote change 
+
+```
+
+```{r}
+#deleted remote repo branch, the branch still exists in local repo
+
+```
