@@ -2,6 +2,7 @@
 title: "FirstComp_day2"
 format: html
 editor: visual 
+author : Kate Becker
 ---
 
 # Making and indexing data in R 
@@ -159,5 +160,21 @@ trees[3] <- "OAK"
 
 #can reassign values based on position 
 trees
+```
+
+```{r}
+#weve been working on same branch locally and pushing to remote main branch, then pulling down to local branch 
+#have website or app, where its deploying from like website is main branch, iteraitngon stuff pushign to maiin branch wehn you push, push you udpate your web page, workign on soething but want it obe stored but dont want it to be stored 
+#dont wanna pus frequently updatnig to branch everyones working 
+# workign with rbanches creates additional sdie channel so were not pushing or pulling from main creates intermediate place to work 
+
+```
+
+### Creating branches 
+
+```{r}
+#creating git commit sending to local branch, local branch to remote main branch on git, dont wanna mess directly with main branch peopel are working on it so make side branch, lcoal branch to remote branch pushign there rather than remote main, merge into main 
+# remote branch amkes changes main branch person can you review if looks good merge branch to main branchh then delete branch if you would like
+#branchs provide safety check 
 
 ```
