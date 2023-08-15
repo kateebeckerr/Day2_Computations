@@ -229,6 +229,8 @@ fish_size [,2]
 ```
 
 ```{r}
-#deleted remote repo branch, the branch still exists in local repo
+#deleted remote repo branch, the branch still exists in local repo, deleted it but now remote changes are there but local isnt updated use git pull
 
 ```
+
+An edit!!
