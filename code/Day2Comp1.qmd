@@ -1,0 +1,13 @@
+---
+title: "FirstComp_day2"
+format:
+  html:
+    theme: default
+    toc: true
+    number-sections: true
+---
+
+```{r}
+
+```
+
