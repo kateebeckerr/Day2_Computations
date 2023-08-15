@@ -1,13 +1,163 @@
 ---
 title: "FirstComp_day2"
-format:
-  html:
-    theme: default
-    toc: true
-    number-sections: true
+format: html
+editor: visual 
 ---
 
+# Making and indexing data in R 
+
+### Vectors 
+
+Making vectors
+
 ```{r}
+#c combiens these strings teddy/...
+dogs <- c("teddy", "khora", "waffle", "banjo", "tallie" )
+
+#check dog class, run these! prob do in console
+typeof(dogs)
+class(dogs)
+
+#vector can only have data of a singletype otherwise will all be oerced into save
+
 
 ```
 
+```{r}
+my_breakfast <- c("waffles", 2, TRUE, "coffee")
+typeof(my_breakfast)
+#entire vector is character bc can only have a single type of variables, waffles 2 and true are different variables but stored as characters to be part of single vector 
+class(my_breakfast)
+```
+
+```{r}
+#numebrsof different types, numeric, teddy is 50 pounds, khora is 60...
+weights <- c(50, 60, 25, 35, 55)
+#looks liek integer
+typeof(weights)
+#comes up as double, higehr 64 bit storage for values, whole numebrb values will default to dooubles, numebrs tht can have decimals when you do calcualtions
+class(weights)
+#numeric
+```
+
+```{r}
+weights_integer <- c(50L, 60L, 25L, 35L, 55L)
+typeof(weights_integer) 
+#integer 
+class(weights_integer)
+#integer still numeric 
+```
+
+```{r}
+#overarching class of things can ask questions, ask question returns string, what is class of vector weights, waht as logical if  nuemric keep and not throw it out if nuemric coerce to string or not, binary question to ask if condition is met 
+#ask questionsif numeric or cahracter "is." are askignna  questions
+is.numeric(weights_integer)
+#returned true so know tis numeric
+```
+
+```{r}
+#change class of a variable such as weights liek 50,60, 25 (numeric) store new version with characters...
+zipcode <- c(93105, 93514, 93101, 93401)
+#r udnerstadns these as a number not zip
+class(zipcode)
+
+```
+
+```{r}
+#same things you can use add on you can use is
+zipcodes_chr <- as.character(zipcode)
+#now strings, cataegories, not numeric values associated with them 
+# use as. family of functions to recast data classes
+# use is. family fucntions to ask waht class something is 
+#nuemric can be numeric or double jsut class jsut returns numeic for doubles, use class, less interested in knowing float/double/integer 
+
+```
+
+### Create a vector with named elements 
+
+```{r}
+#named elements within vectors or lists, still a vector use c
+dog_food <- c(teddy = "purina", khora = "alpo",waffle = "fancy feast", bango = "blue diamond", tallie = "Farmer's dog")
+#order dependant, name tacked onto vector , class refers to values not names 
+is.character(dog_food)
+#True 
+test <- c(cat = 4, dog = 10, elephant = 11)
+class(test)
+#numeric , quoations would say its a character, a value with a stored name but name isnt a vector value
+```
+
+```{r}
+#vector of data is whole column in dataframe, pick pieces out of dataframe
+#elements are separated by comma, value of element is string value, what is value of (Dog name): square brackets immediately follows vector name
+dog_food[2]
+#R uses 1 index, first element of vector gives positional value of 1
+#pythoon and java script use 0 idnexing, 2nd position on these platforms its 1 
+```
+
+```{r}
+#elemnts of vector-1D of valuels, if named call name, msot dont have name associated with him 
+dog_food["khora"]
+```
+
+### Access ranges of values in a vector 
+
+Use : to refer to a range(low : high) by position
+
+```{r}
+trees <- c("ponderosa", "lodgepole", "jeffrey", "sugar", "white", "bristlecone")
+trees[3]
+
+#range from 3 to 5, 3 how far youve moved on from starting point
+trees[3:5]
+
+```
+
+### Warm -up for loops
+
+```{r}
+# for loops iterates over different telements in a data structure, applies does something with vallues and returns something mew 
+#use index to iterate through different vectors 
+#been referring to absolute liek elen t2 but can ahveb evcor values to iterate over 
+```
+
+```{r}
+#use index helper, i, writtign for loops
+i <- 4
+trees[i] 
+#came out sugar
+# index mgith be changing, iterate over multipe idnexes by position returnign something for each one 
+i <- 3 
+trees[i]
+```
+
+```{r}
+#writting seq code we used/ same thing as seq(from =1, to =3)
+i <- seq(1:3)
+trees[i]
+
+```
+
+```{r}
+#dont normal deal with complex numbers
+y = 6i
+class(y)
+```
+
+```{r}
+#variable doesnt matter for for loops 
+yoda <- 4
+trees[yoda]
+```
+
+```{r}
+#when you render something liek quarto r markdown, takes file to new black working section, doesnt last, moves and evaluates in empty session running from top down, linear, woudl this work in a new working session, rendering puts code et new working session to reproduce 
+```
+
+```{r}
+#mutable you can change what you store in a vector 
+trees[3] <- "OAK"
+
+#can reassign values based on position 
+trees
+
+```
